@@ -27,7 +27,7 @@ python -m pip install -r "$env:USERPROFILE/.codex/skills/pcb-art-easyeda/require
 
 Linux/macOS 的技能位置通常为 `~/.codex/skills/pcb-art-easyeda`。如设置了 `CODEX_HOME`，使用其 `skills` 子目录。下一条 Codex 消息可调用 `$pcb-art-easyeda`。
 
-依赖 Python 3.10+。Pillow 用于分层处理与预览；Gerber 导出验证需要 gerbonara。Node.js 20+ 仅用于本仓库的运行时测试。SDK 桥接服务使用自己的 Node.js 环境。
+完整工作流依赖 **Python 3.12+**。Pillow 用于分层处理与预览；Gerber 导出验证使用的 gerbonara 1.6.3+ 要求 Python 3.12+。Node.js 20+ 仅用于本仓库的运行时测试。SDK 桥接服务使用自己的 Node.js 环境。
 
 ## 连接嘉立创EDA
 
@@ -106,7 +106,7 @@ python -m unittest discover -s scripts -p "test_*.py" -v
 node scripts/test_runtime.mjs
 ```
 
-测试覆盖源像素精确保留、输入极性、画布、铜覆盖、镜像、归一化回读、超时记录、Gerber 独立回读、ZIP 内容以及 Fill 回滚和空白工程保护。CI 使用 Python 3.10 / 3.12 / 3.13 与 Node.js 20；CI 不连接真实 EDA。
+测试覆盖源像素精确保留、输入极性、画布、铜覆盖、镜像、归一化回读、超时记录、Gerber 独立回读、ZIP 内容以及 Fill 回滚和空白工程保护。CI 使用 Python 3.12 / 3.13 与 Node.js 20；CI 不连接真实 EDA。
 
 v0.2.0 发布前，通用命令还在专用空白 PCB 上完成了合成图案实机检查：六层 Image 导入与回读、原生 `.epro2` 导出、四张材料预览及 Gerber 独立回读均通过。检查结束恢复了原文档焦点。
 

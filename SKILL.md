@@ -3,7 +3,7 @@ name: pcb-art-easyeda
 description: 制作和精修 PCB 艺术画、双面板画或挂件，将分层黑白 PNG 导入嘉立创EDA专业版，生成铜、阻焊开窗、丝印和矩形板框，导出原生工程与独立回读验证的 Gerber 草稿。不用于普通功能电路设计。
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # PCB 艺术画与嘉立创EDA
@@ -29,7 +29,7 @@ python "<skill-dir>/scripts/pcb_art.py" export-native "<work-dir>/board-v1.epro2
 python "<skill-dir>/scripts/pcb_art.py" export-gerber "<work-dir>/manifest.json" "<work-dir>/gerber-v1"
 ```
 
-Python 3.10+；处理图片需要 Pillow。Gerber 草稿导出还需要 gerbonara。使用可用的 `easyeda-api` 技能启动桥接和检查 API；使用时读取该技能的连接流程。本技能不附带桥接服务。网关扩展入口：https://jlc-ext.com/item/oshwhub/run-api-gateway 。仅安装本技能不等于扩展已连接。
+完整工作流需要 Python 3.12+；处理图片需要 Pillow。Gerber 草稿导出还需要 gerbonara，其当前验证版本要求 Python 3.12+。使用可用的 `easyeda-api` 技能启动桥接和检查 API；使用时读取该技能的连接流程。本技能不附带桥接服务。网关扩展入口：https://jlc-ext.com/item/oshwhub/run-api-gateway 。仅安装本技能不等于扩展已连接。
 
 导入前查看 `status`。仅对用户为此任务打开的专用空白 PCB 执行导入。多窗口时使用 `--window` 明确指定目标，不切换或覆盖无关工程。脚本固定文档 UUID，验证空白状态，每层创建一个包含多块轮廓的原生 Image 图元，回读图层、位置与制造几何。不要将图片作为彩色 Object 图元导入来替代制造层。
 
