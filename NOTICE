@@ -1,0 +1,12 @@
+PCB_ART design, fabrication and refinement guidance
+Source: https://github.com/soranatsu/PCB_ART
+Copyright (c) 2026 PCB_ART contributors
+Licensed under the MIT License; see LICENSE.
+
+The EasyEDA integration scripts, tests, packaging and updated workflow guidance
+are adaptations and additions maintained in https://github.com/Oweik/pcb-art-easyeda.
+Copyright (c) 2026 Oweik
+These additions are also provided under the MIT License.
+
+No character illustrations, private user artwork, personal paths, credentials,
+or manufacturer approvals are included in this repository.

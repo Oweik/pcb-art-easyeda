@@ -1,0 +1,6 @@
+interface:
+  display_name: "PCB 艺术画 · 嘉立创EDA"
+  short_description: "将双面板画分层 PNG 导入嘉立创EDA，检查图层并保留可追溯记录"
+  default_prompt: "使用 $pcb-art-easyeda，按我的参考图和工艺要求制作 PCB 板画分层，并在专用空白 PCB 中验证嘉立创EDA导入。"
+policy:
+  allow_implicit_invocation: true
